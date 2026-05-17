@@ -1,0 +1,36 @@
+type Swap @entity {
+  id: ID!
+  user: Bytes!
+  amountIn: BigInt!
+  amountOut: BigInt!
+  aToB: Boolean!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
+
+type LiquidityEvent @entity {
+  id: ID!
+  user: Bytes!
+  amountA: BigInt!
+  amountB: BigInt!
+  lpTokens: BigInt!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
+
+type VaultDeposit @entity {
+  id: ID!
+  sender: Bytes!
+  owner: Bytes!
+  assets: BigInt!
+  shares: BigInt!
+  blockNumber: BigInt!
+  timestamp: BigInt!
+}
+
+type PoolState @entity {
+  id: ID!
+  reserveA: BigInt!
+  reserveB: BigInt!
+  lastUpdated: BigInt!
+}
